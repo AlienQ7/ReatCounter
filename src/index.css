@@ -1,0 +1,98 @@
+/* Deep Space Background */
+body {
+  background-color: #050505;
+  color: #00ff41; /* Classic Matrix/Sci-fi Green */
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* The Outer Frame */
+.sci-fi-frame {
+  padding: 5px;
+  background: linear-gradient(135deg, #00ff41 0%, #001100 50%, #0088ff 100%);
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+.counter-container {
+  background: #0a0a0a;
+  padding: 40px;
+  border: 1px solid #00ff41;
+  position: relative;
+  text-align: center;
+  clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
+}
+
+/* Moving Scanner Line Effect */
+.scanner-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 255, 65, 0.5);
+  box-shadow: 0 0 10px #00ff41;
+  animation: scan 4s linear infinite;
+}
+
+.label {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.count-display {
+  font-size: 5rem;
+  margin: 20px 0;
+  text-shadow: 0 0 15px #00ff41;
+}
+
+.unit {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+/* Sci-Fi Buttons */
+.button-group {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid #00ff41;
+  color: #00ff41;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.btn:hover {
+  background: rgba(0, 255, 65, 0.1);
+  box-shadow: inset 0 0 10px #00ff41, 0 0 10px #00ff41;
+  transform: scale(1.02);
+}
+
+.btn-reset {
+  border-color: #ff003c;
+  color: #ff003c;
+}
+
+.btn-reset:hover {
+  box-shadow: inset 0 0 10px #ff003c, 0 0 10px #ff003c;
+}
+
+/* Animations */
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
